@@ -1,4 +1,4 @@
-package mvn;
+package io.github.mwrod453.mvn;
 
 import pl.droidsonroids.retrofit2.JspoonConverterFactory;
 import retrofit2.Retrofit;

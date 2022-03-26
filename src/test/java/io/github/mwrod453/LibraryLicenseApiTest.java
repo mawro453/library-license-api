@@ -1,3 +1,5 @@
+package io.github.mwrod453;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -27,7 +29,7 @@ class LibraryLicenseApiTest {
         void givenNotExistingPackageVersion_shouldReturnLicense() {
             assertThatThrownBy(() -> libraryLicenseApi.getNpmLicense("npm", "0.1"))
                     .isInstanceOf(LibraryLicenseException.class)
-                    .hasMessage("npm:0.1 does not exist.");
+                    .hasMessage("io.github.mwrod453.npm:0.1 does not exist.");
         }
     }
 

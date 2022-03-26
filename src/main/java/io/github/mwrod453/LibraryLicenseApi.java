@@ -1,9 +1,11 @@
-import mvn.MvnArtifactVersion;
-import mvn.MvnRepositoryApi;
-import mvn.MvnRepositoryApiFactory;
-import npm.NpmLicenseApi;
-import npm.NpmLicenseApiFactory;
-import npm.NpmPackageVersion;
+package io.github.mwrod453;
+
+import io.github.mwrod453.mvn.MvnArtifactVersion;
+import io.github.mwrod453.mvn.MvnRepositoryApi;
+import io.github.mwrod453.mvn.MvnRepositoryApiFactory;
+import io.github.mwrod453.npm.NpmLicenseApi;
+import io.github.mwrod453.npm.NpmLicenseApiFactory;
+import io.github.mwrod453.npm.NpmPackageVersion;
 import retrofit2.Response;
 
 import java.io.IOException;
@@ -26,7 +28,7 @@ public class LibraryLicenseApi {
     }
 
     /**
-     * <p>Returns the license of the given npm package version.</p>
+     * <p>Returns the license of the given io.github.mwrod453.npm package version.</p>
      *
      * <p>The license will be retrieved from <a href="https://www.npmjs.com/">npmjs.com</a></p>
      *

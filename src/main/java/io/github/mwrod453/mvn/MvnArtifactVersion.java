@@ -1,4 +1,4 @@
-package mvn;
+package io.github.mwrod453.mvn;
 
 import pl.droidsonroids.jspoon.annotation.Selector;
 

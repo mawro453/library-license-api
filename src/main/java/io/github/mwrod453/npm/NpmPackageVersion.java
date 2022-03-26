@@ -1,4 +1,4 @@
-package npm;
+package io.github.mwrod453.npm;
 
 public class NpmPackageVersion {
 

@@ -1,4 +1,4 @@
-package mvn;
+package io.github.mwrod453.mvn;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
