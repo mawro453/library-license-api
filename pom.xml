@@ -8,10 +8,38 @@
     <artifactId>library-license-api</artifactId>
     <version>1.0</version>
 
+    <name>Library License API</name>
+    <description>Library License API can be used to retrieve the license of libraries</description>
+    <url>https://github.com/mwrod453/library-license-api</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Martin Wrodarczyk</name>
+            <email>martin.wrod@gmail.com</email>
+            <url>https://github.com/mwrod453</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/mwrod453/library-license-api.git</connection>
+        <developerConnection>scm:git:ssh://github.com:mwrod453/library-license-api.git</developerConnection>
+        <url>http://github.com/mwrod453/library-license-api/tree/main</url>
+    </scm>
+
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
 
+        <!-- Dependencies -->
         <retrofit.version>2.9.0</retrofit.version>
         <converter-gson.version>2.9.0</converter-gson.version>
         <junit.version>5.8.2</junit.version>
