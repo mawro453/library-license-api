@@ -6,7 +6,7 @@
 
     <groupId>io.github.mwrod453</groupId>
     <artifactId>library-license-api</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
 
     <name>Library License API</name>
     <description>Library License API can be used to retrieve the license of libraries</description>
