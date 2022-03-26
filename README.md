@@ -10,7 +10,7 @@ Maven:
 <dependency>
     <groupId>io.github.mwrod453</groupId>
     <artifactId>library-license-api</artifactId>
-    <version>1.0</version>
+    <version>${version}</version>
 </dependency>
 ```
 
