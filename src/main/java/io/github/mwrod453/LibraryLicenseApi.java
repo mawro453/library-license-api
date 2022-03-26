@@ -23,16 +23,22 @@ public class LibraryLicenseApi {
         this.mvnRepositoryApi = MvnRepositoryApiFactory.create();
     }
 
+    /**
+     * @return Instance of {@link LibraryLicenseApi}
+     */
     public static LibraryLicenseApi create() {
         return new LibraryLicenseApi();
     }
 
     /**
-     * <p>Returns the license of the given io.github.mwrod453.npm package version.</p>
+     * <p>Returns the license of the given npm package version.</p>
      *
      * <p>The license will be retrieved from <a href="https://www.npmjs.com/">npmjs.com</a></p>
      *
-     * @return License (e. g. 'MIT')
+     * @param packageName    Name of the package
+     * @param packageVersion Version of the package
+     * @return License (e.g. 'MIT')
+     * @throws LibraryLicenseException If the artifact version does not exist or if there is no internet connection
      */
     public String getNpmLicense(String packageName, String packageVersion) throws LibraryLicenseException {
         Response<NpmPackageVersion> packageVersionCall;
@@ -60,7 +66,11 @@ public class LibraryLicenseApi {
      *
      * <p>The license will be retrieved from <a href="https://mvnrepository.com/">mvnrepository.com</a></p>
      *
-     * @return License (e. g. 'MIT')
+     * @param groupId    Id of the artifact's group
+     * @param artifactId Id of the artifact (project)
+     * @param version    Version of the artifact
+     * @return License (e.g. 'MIT')
+     * @throws LibraryLicenseException If the artifact version does not exist or if there is no internet connection
      */
     public String getMvnLicense(String groupId, String artifactId, String version) throws LibraryLicenseException {
         Response<MvnArtifactVersion> artifactVersionCall;

@@ -9,6 +9,12 @@ import retrofit2.http.Path;
  */
 public interface MvnRepositoryApi {
 
+    /**
+     * @param groupId    Id of the artifact's group
+     * @param artifactId Id of the artifact (project)
+     * @param version    Version of the artifact
+     * @return License of the package
+     */
     @GET("/artifact/{groupId}/{artifactId}/{version}")
     Call<MvnArtifactVersion> getLicense(@Path("groupId") String groupId,
                                         @Path("artifactId") String artifactId,

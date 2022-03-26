@@ -9,6 +9,11 @@ import retrofit2.http.Path;
  */
 public interface NpmLicenseApi {
 
+    /**
+     * @param packageName    Name of the package
+     * @param packageVersion Version of the package
+     * @return License of the package
+     */
     @GET("/{name}/{version}")
     Call<NpmPackageVersion> getLicense(@Path("name") String packageName, @Path("version") String packageVersion);
 }
