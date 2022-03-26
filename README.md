@@ -2,10 +2,26 @@
 
 This project provides a client for accessing license information for maven artifacts and npm packages.
 
+Download
+---
+Maven:
+
+```xml
+<dependency>
+    <groupId>io.github.mwrod453</groupId>
+    <artifactId>library-license-api</artifactId>
+    <version>1.0</version>
+</dependency>
+```
+
+Gradle:
+
+```groovy
+compile 'io.github.mwrod45:library-license-api:${version}'
+```
+
 Usage
 ---
-Create an instance using the factory method `create`:
-
 ```java
 LibraryLicenseApi api = LibraryLicenseApi.create();
 
