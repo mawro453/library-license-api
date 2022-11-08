@@ -1,5 +1,7 @@
 # Library License API
 
+[![CI](https://github.com/mwrod453/library-license-api/actions/workflows/maven.yml/badge.svg?branch=main)](https://github.com/mwrod453/library-license-api/actions/workflows/maven.yml)
+
 This project provides a client for accessing license information for maven artifacts and npm packages.
 
 Download
