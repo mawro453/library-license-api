@@ -7,7 +7,7 @@ import pl.droidsonroids.jspoon.annotation.Selector;
  */
 public class MvnArtifactVersion {
 
-    @Selector("#maincontent > table > tbody .lic")
+    @Selector("main > .content > table > tbody td > .lic")
     private String license;
 
     /**
