@@ -29,7 +29,7 @@ class LibraryLicenseApiTest {
         void givenNotExistingPackageVersion_shouldReturnLicense() {
             assertThatThrownBy(() -> libraryLicenseApi.getNpmLicense("npm", "0.1"))
                     .isInstanceOf(LibraryLicenseException.class)
-                    .hasMessage("npm:0.1 does not exist.");
+                    .hasMessage("npm:0.1 does not exist (Code: 405).");
         }
     }
 
@@ -46,7 +46,7 @@ class LibraryLicenseApiTest {
         void givenNotExistingPackage_shouldReturnLicense() {
             assertThatThrownBy(() -> libraryLicenseApi.getMvnLicense("org.apache.maven", "maven-artifact", "0.1"))
                     .isInstanceOf(LibraryLicenseException.class)
-                    .hasMessage("org.apache.maven:maven-artifact:0.1 does not exist.");
+                    .hasMessage("org.apache.maven:maven-artifact:0.1 does not exist (Code: 404).");
         }
     }
 }

@@ -54,11 +54,13 @@ public class LibraryLicenseApi {
             return packageVersionCall.body().getLicense();
         }
 
-        if (packageVersionCall.code() == 404 || packageVersionCall.code() == 405) {
-            throw new LibraryLicenseException(packageName + ":" + packageVersion + " does not exist.");
+        int code = packageVersionCall.code();
+        if (code == 404 || code == 405) {
+            throw new LibraryLicenseException(
+                    packageName + ":" + packageVersion + " does not exist (Code: " + code + ").");
         }
 
-        throw new LibraryLicenseException(packageVersionCall.message());
+        throw new LibraryLicenseException(packageVersionCall.message() + "(Code: " + code + ")");
     }
 
     /**
@@ -86,10 +88,12 @@ public class LibraryLicenseApi {
             return artifactVersionCall.body().getLicense();
         }
 
-        if (artifactVersionCall.code() == 404) {
-            throw new LibraryLicenseException(groupId + ":" + artifactId + ":" + version + " does not exist.");
+        int code = artifactVersionCall.code();
+        if (code == 404) {
+            throw new LibraryLicenseException(
+                    groupId + ":" + artifactId + ":" + version + " does not exist (Code: " + code + ").");
         }
 
-        throw new LibraryLicenseException(artifactVersionCall.message());
+        throw new LibraryLicenseException(artifactVersionCall.message() + "(Code: " + code + ")");
     }
 }
