@@ -29,7 +29,7 @@ class LibraryLicenseApiTest {
         void givenNotExistingPackageVersion_shouldReturnLicense() {
             assertThatThrownBy(() -> libraryLicenseApi.getNpmLicense("npm", "0.1"))
                     .isInstanceOf(LibraryLicenseException.class)
-                    .hasMessage("npm:0.1 does not exist (Code: 405).");
+                    .hasMessage("npm:0.1 does not exist (Code: 404).");
         }
     }
 
